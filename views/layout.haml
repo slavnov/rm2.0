@@ -1,0 +1,63 @@
+!!!
+%html.no-js{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %title Магазин "Радиомастер Вологда" | #{@title}
+    %link{href: "css/foundation.css", rel: "stylesheet"}/
+    %link{href: "css/style.css", rel: "stylesheet"}/
+    %link{href: "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel: "stylesheet"}/
+
+    %script{src: "js/modernizr.js"}
+  %body
+    .contain-to-grid
+      %nav.top-bar{"data-topbar" => ""}
+        %ul.title-area
+          %li.name
+            %h1
+              %a{href: "/"} Радиомастер
+          %li.toggle-topbar.menu-icon
+            %a{href: "#"}
+              %span Меню
+        %section.top-bar-section
+          / Right Nav Section
+          %ul.right
+            //%li
+            //%a{href: "/price"} Прайс лист онлайн
+            %li
+              %a{href: "/download_price"} Прайс лист XLS
+
+
+          / Left Nav Section
+          %ul.left
+            %li
+              %a{href: "/contact"} Контакты
+            %li
+              %a{href: "/about"} О проекте            
+            %li
+              %a{href: "/api"} API
+            %li
+              %a{href: "/cli"} CLI            
+    .row
+      .large-12.columns
+        =yield
+
+    %hr
+    
+    .row
+      .large-12.columns
+        %small
+          %a.right{:href=>"/about"}
+            Donate ;)
+
+
+    %script{src: "http://yandex.st/jquery/2.0.3/jquery.js"}
+    %script{src: "js/foundation/foundation.js"}
+    %script{src: "js/foundation/foundation.magellan.js"}
+    %script{src: "js/foundation/foundation.accordion.js"}
+    %script{src: "js/foundation/foundation.topbar.js"}
+    %script{src: "js/foundation/foundation.joyride.js"}    
+    %script{src: "js/main.js"}  
+
+    :javascript
+      $(document).foundation();

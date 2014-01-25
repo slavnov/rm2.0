@@ -1,0 +1,23 @@
+.fixed{
+  padding: 10px 10px 0 10px;
+  height: 58px;
+  background-color: #fcfcfc;
+}
+
+.search-featured{
+  padding: 5px;
+  margin: 0 10px;
+}
+
+#ancor {
+  height: 100px
+}
+
+.fix{
+  width: 30px;
+  height: 19px;
+}
+
+.unstyled{
+  list-style-type: none;
+}

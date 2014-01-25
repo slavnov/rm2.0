@@ -1,0 +1,54 @@
+:javascript
+  lastprice  = #{Price.last(:order => :date.asc).to_json}
+  allprice   = #{Hash[Price.all(:order => :date.asc).collect{|i| [i.id.to_s, i.date]}].to_json}
+  categories = #{Hash[Category.all.collect{|i| [i.id.to_s, i.name]}].to_json}
+
+.row
+  .large-12.columns
+    .panel.search-featured.small.radius
+      %ul.inline-list
+        %li Популярные запросы:
+        -Query.sort(:count.desc).limit(5).each do |query|
+          %li.top-search 
+            = query.name
+
+  .large-12.columns
+    %div{"data-magellan-expedition" => "fixed"}
+      %form#search
+        .row.collapse
+          .large-10.small-8.columns
+            %input#main-query{placeholder: "#{@query}", type: "text", name: "query"}/
+          .large-2.small-4.columns
+            %input.button.postfix{type: "submit", value: "⏎ Найти"}
+
+.row
+  .large-12.columns
+    .panel.callout.radius
+      %h1 
+        Магазин "Радиомастер"
+      %p 
+        Розничная торговля электронными компонентами для ремонта и разработок.
+      %p 
+        Магазин занимается 15 лет продажей радиодеталей, запчастей для сотовых, паяльного оборудования в городе Вологде.
+        %b 
+          =Product.count 
+        наименований в наличии, возможна поставка радиодеталей под заказ.
+      .row.collapse
+        .large-1.columns
+          %br
+          %span.alert.label
+            Внимание! 
+        .large-11.columns
+          %p
+            Данный сайт является неофициалным. Создан для удобного поиска запчастей, а так же для интеграции c системами учета посредством API.
+
+
+.row
+  .large-12.columns
+    #ancor
+
+    %h3 Результаты
+    %dl.accordion#search-result{"data-accordion" => ""}
+
+    #clear-fix
+      

@@ -1,0 +1,31 @@
+.row
+  .large-9.columns
+    %h1 Контакты 
+    %p Адрес: Магазин "РАДИОМАСТЕР", Вологда, Зосимовская, д. 56,
+    %p Телефон: (8172)78-02-69
+  .large-3.columns
+    %ul.unstyled
+      %li
+        %span.label.fix.success Пн
+      %li
+        %span.label.fix.success Вт
+      %li
+        %span.label.fix.success Ср
+        C 10 до 18
+      %li
+        %span.label.fix.success Чт
+      %li
+        %span.label.fix.success Пт
+      %li
+        %span.label.fix Сб
+        С 10 до 15
+      %li
+        %span.label.alert.fix Вс
+        Выходной
+
+%h2 Схема проезда
+#ymaps-map-id_1341078798697984825867{style: "width: 100%; height: 450px;"}
+:javascript
+  function fid_1341078798697984825867(ymaps) {var map = new ymaps.Map("ymaps-map-id_1341078798697984825867", {center: [39.89468475223147, 59.21134232571663], zoom: 16, type: "yandex#map"});map.controls.add("zoomControl").add("mapTools").add(new ymaps.control.TypeSelector(["yandex#map", "yandex#satellite", "yandex#hybrid", "yandex#publicMap"]));map.geoObjects.add(new ymaps.Placemark([39.892260035281176, 59.21104524305132], {balloonContent: 'Магазин "Радиомастер"'}, {preset: "twirl#redDotIcon"})).add(new ymaps.Polyline([[39.89174686552851, 59.21026715760565], [39.89261590124922, 59.21066327557782], [39.891961442249674, 59.21102637969982], [39.89212237479057, 59.21110340130574]], {balloonContent: "Остановка электротовары"}, {strokeColor: "004056", strokeWidth: 5, strokeOpacity: 0.5})).add(new ymaps.Polyline([[39.89188023487841, 59.213275496686265], [39.889646491079844, 59.21230837477464], [39.89186092277704, 59.211071100733896]], {balloonContent: "Остановка Золотой ключик"}, {strokeColor: "ff6600", strokeWidth: 5, strokeOpacity: 0.5}));};
+%script{src: "http://api-maps.yandex.ru/2.0/?coordorder=longlat&load=package.full&wizard=constructor&lang=ru-RU&onload=fid_1341078798697984825867", type: "text/javascript"}
+

@@ -1,0 +1,14 @@
+%h1 
+  Скачать прайс листы
+
+%p Вы можете скачать все доступные листы для Microsoft Office Excel, в формате XLS.
+
+%ul
+  -Price.all.each do |price|
+    %li 
+      %a{:href => "/#{price.path}"}= price.date
+
+%p 
+  Если у вас храняться более старые файлы, просьба написать на 
+  %a{:href => "mailto:alexey@alphav.ru"}почту
+  \.
