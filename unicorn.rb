@@ -1,6 +1,6 @@
 worker_processes 8
 working_directory '/web/rm2.0/current'
-listen 'unix:/tmp/basic.sock', :backlog => 512
+listen 'unix:/tmp/unicorn.sock', :backlog => 512
 timeout 120
 pid '/var/run/unicorn/basic_unicorn.pid'
 
