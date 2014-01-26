@@ -26,7 +26,7 @@
 Репозиторий проекта доступен на [Github](https://github.com/groverz/rm2.0). Отправляйте __pull request__ или пишите о багах в __issue__.
 
 #### Обратная связь
- Пожеллания и предожения принимаются [тут](mailto:alexey@alphav.ru).
+ Пожелания и предложения принимаются [тут](mailto:alexey@alphav.ru).
 
 
 
