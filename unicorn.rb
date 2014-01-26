@@ -1,4 +1,4 @@
-worker_processes 2
+worker_processes 4
 working_directory '/web/rm2.0/current'
 listen 'unix:/tmp/unicorn.sock', :backlog => 512
 timeout 120
