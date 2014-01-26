@@ -10,3 +10,4 @@ gem 'sinatra-contrib'
 gem 'log_buddy'
 gem 'rdiscount'
 gem 'coffee-script'
+gem "spreadsheet", "~> 0.8.9"

@@ -1,13 +1,13 @@
 development:
   host: localhost
   port: 27017
-  database: rm35_dev
+  database: rm35
   logfile: development.log
 
 production:
   host: localhost
   port: 27017
-  database: rm35_prod
+  database: rm35
   logfile: production.log
 
 environment: development
